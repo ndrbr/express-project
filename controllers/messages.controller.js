@@ -5,7 +5,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export function getMessages(req, res) {
-  res.sendFile(path.join(__dirname, "..", "public", "images", "vim.gif"));
+  res.render("messages", {
+    title: "Messages to my Friends!",
+    friend: "Fedor Sumkin",
+  });
 }
 
 export function postMessage(req, res) {
